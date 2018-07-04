@@ -1,17 +1,15 @@
 // +build go1.10
 
-package pq_test
+package pq
 
 import (
 	"database/sql"
 	"fmt"
-
-	"github.com/lib/pq"
 )
 
 func ExampleNewConnector() {
 	name := ""
-	connector, err := pq.NewConnector(name)
+	connector, err := NewConnector(name)
 	if err != nil {
 		fmt.Println(err)
 		return
